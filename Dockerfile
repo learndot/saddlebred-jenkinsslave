@@ -1,4 +1,4 @@
-FROM dockerfile/java:oracle-java7
+FROM java:8
 MAINTAINER ServiceRocket Tools
 
 RUN apt-get update && apt-get install -y \
@@ -7,6 +7,7 @@ RUN apt-get update && apt-get install -y \
     curl \
     apt-transport-https \
     ca-certificates \
+    lxc \
     iptables
 
 # Configure SSH as part of Jenkins slave requirement
